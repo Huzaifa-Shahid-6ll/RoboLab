@@ -2,7 +2,14 @@
 
 name = str(input("What is your name?: "))
 study_sessions_counter = int(input("How many study session have you had?: "))
-minutes_per_session = float(input("How many minutes did you study on average in your study sessions?: "))
-time_in_hours = round((minutes_per_session/60),2)
+time_per_session = []
 
-print(f"""OK so you had {study_sessions_counter} sessions and on average you studied {minutes_per_session} mins , in hours that would equate to {time_in_hours} hrs .""")
+for i in range(study_sessions_counter):
+    per_session_time = int(input(f"For study session {i+1} , how much did you study in minutes?: "))
+    time_per_session.append(per_session_time)
+    
+
+print("Ok got it!")
+
+print(time_per_session)
+print(f"""OK so you had {study_sessions_counter} sessions .""")
